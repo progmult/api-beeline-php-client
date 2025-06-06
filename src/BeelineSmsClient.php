@@ -106,9 +106,9 @@ class BeelineSmsClient
             // parse XML
             //var_dump($response->getBody()->__toString());
             return BeelineResponseParser::parseXML($response->getBody()->__toString());
-        } else {
-            return new SimpleXMLElement();
         }
+
+        return new SimpleXMLElement('<output/>');
     }
 
     /**
